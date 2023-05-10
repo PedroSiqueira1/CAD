@@ -49,9 +49,9 @@ PROGRAM matrix_vector_multiply
       INTEGER, DIMENSION(:) :: y
       INTEGER :: i, j, n
       n = SIZE(x)
-      DO i = 1, n
-        y(i) = 0
-        DO j = 1, n
+      DO j = 1, n
+        y(j) = 0
+        DO i = 1, n
           y(i) = y(i) + A(j,i) * x(j)
         END DO
       END DO

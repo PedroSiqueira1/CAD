@@ -7,10 +7,10 @@
 #define SIZE_STEP 1500
 
 void multiplyMatrixByVector(int** matrix, int* vector, int n, int m, int* result) {
-    for (int i = 0; i < n; i++) {
-        result[i] = 0;
-        for (int j = 0; j < m; j++) {
-            result[i] += matrix[j][i] * vector[j];
+    for (int j = 0; j < n; j++) {
+        result[j] = 0;
+        for (int i = 0; i < m; i++) {
+            result[i] += matrix[i][j] * vector[j];
         }
     }
 }
